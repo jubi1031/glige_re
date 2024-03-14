@@ -1,5 +1,4 @@
 @charset 'utf-8';
-@charset 'utf-8';
 @font-face {
   font-family: "Noto Sans KR";
   src: url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
@@ -41,7 +40,7 @@ font-weight: 900;
 
   font-family: "Noto Sans KR";
 }
-
+section > .inner,
 .mw {
   max-width: 1440px;
   /* width: calc(100% - calc(var(--gap) * 2)); */
@@ -51,6 +50,8 @@ font-weight: 900;
 
 /* header 시작 .hd >nav > h1+.gnb+.person+.ham */
 .hd {
+  position: relative;
+  z-index: 999;
 }
 .hd > nav {
   display: flex;
@@ -99,6 +100,8 @@ font-weight: 900;
   .gnb > li:hover > a {
     color: var(--color-mb);
   }
+
+  /* .gnb > li:hover .sub */
   .gnb:hover .sub {
     height: 180px;
     visibility: visible;
@@ -189,4 +192,99 @@ font-weight: 900;
   }
 }
 @media (max-width: 1100px) {
+}
+
+/* sec1 .mainVisual 영역 시작 */
+.mainVisual .inner {
+  position: relative;
+  padding-bottom: 150px;
+}
+.mainVisual .card {
+  position: relative;
+  padding-top: 40%;
+  background-color: white;
+}
+.mainVisual .card > * {
+  position: absolute;
+}
+.mainVisual .card h3 {
+  left: 0;
+  top: 10%;
+  font-family: "GmarketSansBold";
+  color: var(--color-mb);
+  z-index: 10;
+}
+.mainVisual .card h3 > * {
+  display: block;
+}
+.mainVisual .card span {
+  font-size: 30px;
+  margin-bottom: 1rem;
+}
+.mainVisual .card strong {
+  font-size: 58px;
+  line-height: 1;
+}
+.mainVisual .card img {
+  width: 50%;
+  right: 100px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.mainVisual .mainSlide {
+  overflow: visible;
+}
+.mainVisual .mainSlide .swiper-pagination-bullet {
+  border-radius: 0;
+  height: 1px;
+  width: 0px;
+  margin: 0 10px;
+  text-align: right;
+  line-height: 0px;
+  text-indent: 20px;
+  /* direction: ltr; */
+}
+/*  */
+.mainVisual .mainSlide .swiper-pagination-bullet-active {
+  background-color: var(--color-mb);
+  width: 40px;
+  text-indent: 40px;
+}
+
+.mainVisual .pg1 {
+  bottom: -30px;
+  width: auto;
+  /* text-align: left; */
+}
+
+.quick {
+  background-color: var(--color-sb);
+  position: absolute;
+  bottom: 0;
+  transform: translateY(50%);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+}
+.quick > a {
+  padding: 2rem;
+  font-size: 1.8rem;
+}
+
+@media (max-width: 1100px) {
+  .quick {
+    flex-wrap: wrap;
+  }
+  .quick > a {
+    width: calc(50% - 2px);
+    border: 1px solid white;
+    margin: 1px;
+  }
+}
+
+.eduMonth {
+  background-color: var(--color-mb);
+  color: var(--color-wh);
+  height: 500px;
 }
