@@ -1,0 +1,69 @@
+.inner {
+  position: relative;
+  border: 1px solid red;
+}
+.eduMonth h2 {
+  position: relative;
+  top: 100px;
+  text-align: center;
+}
+.eduMonth strong {
+  font-size: 2.5rem;
+  font-family: "GmarketSansBold";
+}
+.eduMonth span {
+  font-size: 1rem;
+}
+.eduMonth .calendarArea {
+  position: absolute;
+  top: 200px;
+  display: flex;
+}
+.eduMonth .day {
+  border: 1px solid lightblue;
+  display: flex;
+  margin-left: 100px;
+}
+.eduMonth .day li {
+  padding: 0 0.5rem;
+  text-decoration: underline;
+}
+.eduMonth .day .on {
+  width: 40px;
+  height: 40px;
+  border: 1px solid white;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -6px;
+}
+.eduMonth .year {
+  margin-left: 50px;
+  opacity: 0.5;
+  position: relative;
+  border: 1px solid black;
+}
+.year strong {
+  display: block;
+}
+.year span {
+  padding-left: 10px;
+}
+.year button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  position: absolute;
+}
+.year button:nth-of-type(1) {
+  left: -20px;
+  top: 1.5rem;
+}
+.year button:nth-of-type(2) {
+  left: 55px;
+  top: 1.5rem;
+}
+.eduMonth {
+}

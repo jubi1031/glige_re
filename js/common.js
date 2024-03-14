@@ -1,4 +1,4 @@
-let swiper = new Swiper(".mainSlide", {
+let swiper1 = new Swiper(".mainSlide", {
   spaceBetween: 30,
   effect: "fade",
   navigation: {
@@ -6,8 +6,18 @@ let swiper = new Swiper(".mainSlide", {
     prevEl: ".prev1",
   },
   pagination: {
-    el: ".pg1",
+    el: ".pg1,",
     clickable: true,
+    clickable: true,
+    renderBullet: function (index, className) {
+      return '<span class="' + className + '">' + (index + 1) + "</span>";
+    },
+  },
+});
+
+var swiper2 = new Swiper(".eduSwiper", {
+  pagination: {
+    el: ".pg2",
     clickable: true,
     renderBullet: function (index, className) {
       return '<span class="' + className + '">' + (index + 1) + "</span>";
